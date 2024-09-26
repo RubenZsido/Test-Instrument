@@ -1,0 +1,97 @@
+:root {
+  --size-width: 1024px;
+  --size-height: 768px;
+  --color-background: black;
+  --color-foreground: white;
+}
+
+.container {
+  position: relative;
+  width: var(--size-width);
+  height: var(--size-height);
+  background-color: var(--color-background);
+}
+
+.content {
+  width: var(--size-width);
+  height: var(--size-height);
+}
+
+#panel-container .content {
+  display: none;
+}
+
+#panel-container[state="on"] .content {
+  display: block;
+}
+
+#Electricity {
+  color: var(--color-foreground);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* attitude-page */
+
+#background,
+#pitch_indicator,
+#pitch_container,
+#arrow,
+#slip_indicator {
+  transform-origin: 242.5px 242px;
+}
+
+.canvas {
+  background-color: lightblue;
+}
+.horizon {
+  fill: #8b4513;
+}
+.sky {
+  fill: #87ceeb;
+}
+.pitch-lines {
+  stroke: white;
+  stroke-width: 2px;
+}
+.pitch-text {
+  font-size: 10px;
+  fill: white;
+  text-anchor: middle;
+}
+.bank-triangle {
+  fill: yellow;
+}
+.slip-indicator {
+  fill: yellow;
+}
+
+/*
+flaps page
+*/
+
+#flaps-page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+/* pagination */
+.page * {
+  display: none;
+}
+
+.page.active * {
+  display: block;
+}
+.page.active {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.hide-children * {
+  display: none !important;
+}
